@@ -1,0 +1,38 @@
+{
+  "diagnoses" : [ {
+    "term_text" : "Scalp psoriasis",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  } ],
+  "procedures" : [ {
+    "term_text" : "Examination: Scalp reveals demarcated scaly, erythematous plaques.",
+    "omop_domain" : "procedure_occurrence"
+  } ],
+  "medications_and_treatments" : [ {
+    "term_text" : "clobetasol 0.05%",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "T/Gel shampoo",
+    "omop_domain" : "device_exposure",
+    "OMOP_ID" : "0"
+  } ],
+  "tests" : [ {
+    "term_text" : "BP: 130/68",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "HR: 98",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "RR:18",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Temperature is 97.7 today",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  } ],
+  "clinical_narrative" : [ ]
+}

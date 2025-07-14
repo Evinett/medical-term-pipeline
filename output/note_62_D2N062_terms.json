@@ -1,0 +1,85 @@
+{
+  "diagnoses" : [ {
+    "term_text" : "difficulty swallowing",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Acute esophagitis",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  } ],
+  "procedures" : [ {
+    "term_text" : "upper endoscopy",
+    "omop_domain" : "procedure_occurrence"
+  }, {
+    "term_text" : "examination of the mouth reveals no obvious ulcers or evidence of thrush present",
+    "omop_domain" : "procedure_occurrence"
+  } ],
+  "medications_and_treatments" : [ {
+    "term_text" : "Protonix 40 mg first thing in the morning",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Carafate 1 gram 4 times daily for 1 month",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  } ],
+  "tests" : [ {
+    "term_text" : "barium swallow study",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "BP 133/70",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Heart rate looks good",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Temperature is within normal limits",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "SpO2: 100%",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Respiratory rate: 19",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  } ],
+  "clinical_narrative" : [ {
+    "term_text" : "pain radiates to his chest when he swallows",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Reports weight gain",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Reports dysphagia",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Reports epigastric pain",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Positive stress",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "No adenopathy, thyromegaly",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Normal respiratory effort no respiratory distress",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Non-distended Active bowel sounds. Pain to palpation of epigastric area. Negative McMurphy's Sign. No peritoneal signs. No rebound.",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ]
+}

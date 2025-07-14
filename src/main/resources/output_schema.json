@@ -1,0 +1,108 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Clinical Term Extraction Schema",
+  "description": "Defines the structure for extracted clinical terms from a medical note.",
+  "properties": {
+    "diagnoses": {
+      "description": "List of identified diagnoses or conditions.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/term"
+      }
+    },
+    "procedures": {
+      "description": "List of performed or planned procedures.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/term"
+      }
+    },
+    "medications_and_treatments": {
+      "description": "List of prescribed or administered medications and treatments.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/medicationTerm"
+      }
+    },
+    "tests": {
+      "description": "List of diagnostic tests and their results.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/term"
+      }
+    },
+    "clinical_narrative": {
+      "description": "List of other relevant clinical information, symptoms, or findings.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/term"
+      }
+    }
+  },
+  "required": [
+    "diagnoses",
+    "procedures",
+    "medications_and_treatments",
+    "tests",
+    "clinical_narrative"
+  ],
+  "additionalProperties": false,
+  "definitions": {
+    "term": {
+      "type": "object",
+      "properties": {
+        "term_text": {
+          "type": "string",
+          "description": "The exact text extracted from the note."
+        },
+        "omop_domain": {
+          "type": "string",
+          "description": "The corresponding OMOP CDM domain.",
+          "enum": [
+            "condition_occurrence",
+            "procedure_occurrence",
+            "drug_exposure",
+            "device_exposure",
+            "measurement",
+            "observation"
+          ]
+        }
+      },
+      "required": [
+        "term_text",
+        "omop_domain"
+      ],
+      "additionalProperties": false
+    },
+    "medicationTerm": {
+      "type": "object",
+      "properties": {
+        "term_text": {
+          "type": "string"
+        },
+        "omop_domain": {
+          "type": "string",
+          "enum": ["drug_exposure", "device_exposure"]
+        },
+        "details": {
+          "type": "object",
+          "properties": {
+            "drug_name": { "type": "string" },
+            "strength": { "type": "string" },
+            "route": { "type": "string" },
+            "frequency": { "type": "string" },
+            "reason": { "type": "string" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "term_text",
+        "omop_domain"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
+

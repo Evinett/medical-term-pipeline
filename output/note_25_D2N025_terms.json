@@ -1,0 +1,88 @@
+{
+  "diagnoses" : [ {
+    "term_text" : "chronic congestive heart failure",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "diastolic dysfunction",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "iron deficiency anemia",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "436659"
+  }, {
+    "term_text" : "diabetes mellitus",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  } ],
+  "procedures" : [ {
+    "term_text" : "right knee replacement at East Metropolitan Hospital on 06/24/2021",
+    "omop_domain" : "procedure_occurrence"
+  }, {
+    "term_text" : "preop checkup the first week or two of June prior to surgery",
+    "omop_domain" : "procedure_occurrence"
+  }, {
+    "term_text" : "colonoscopy at County Hospital in the next month, prior to a change in her insurance",
+    "omop_domain" : "procedure_occurrence"
+  } ],
+  "medications_and_treatments" : [ {
+    "term_text" : "furosemide",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "torsemide 20 mg by mouth daily",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "lisinopril 10 mg daily",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "clopidogrel",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Prilosec",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "iron supplementation",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "magnesium supplement",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  } ],
+  "tests" : [ {
+    "term_text" : "BNP had been 3000 in 03/2021, up to 6000 in 04/2021",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Magnesium 1.7",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Hemoglobin WNL",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Potassium 3.9",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Creatinine 0.7",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "BUN 23",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Hgb A1c 5.5",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  } ],
+  "clinical_narrative" : [ ]
+}

@@ -1,0 +1,38 @@
+{
+  "diagnoses" : [ {
+    "term_text" : "atopic eczema",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Right leg contusion",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  } ],
+  "procedures" : [ {
+    "term_text" : "colectomy",
+    "omop_domain" : "procedure_occurrence"
+  } ],
+  "medications_and_treatments" : [ {
+    "term_text" : "Fluocinonide topical cream",
+    "omop_domain" : "device_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Tylenol",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "ibuprofen",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Mobic 15 mg once a day",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  } ],
+  "tests" : [ {
+    "term_text" : "X-rays of the right lower extremity is normal, no fractures or dislocations",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ],
+  "clinical_narrative" : [ ]
+}

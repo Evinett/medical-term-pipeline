@@ -1,0 +1,93 @@
+{
+  "diagnoses" : [ {
+    "term_text" : "Melanoma",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Stage 1 melanoma",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Augmentin",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  } ],
+  "procedures" : [ {
+    "term_text" : "Wide local excision with a 1-2 cm margin",
+    "omop_domain" : "procedure_occurrence"
+  }, {
+    "term_text" : "Primary closure or skin graft closure",
+    "omop_domain" : "procedure_occurrence"
+  } ],
+  "medications_and_treatments" : [ ],
+  "tests" : [ {
+    "term_text" : "Pathology Report",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Histology",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Clark level",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Breslow thickness",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Radial growth phase",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Vertical growth phase",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Mitotic figures",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Ulceration",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Regression",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Lymphatic invasion",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Perineural invasion",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Microscopic satellitosis",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Infiltrating lymphocytes",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Melanocytic nevus",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Predominant cytology",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Peripheral margin",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Deep margin",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ],
+  "clinical_narrative" : [ ]
+}

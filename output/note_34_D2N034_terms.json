@@ -1,0 +1,49 @@
+{
+  "diagnoses" : [ {
+    "term_text" : "Left shoulder pain",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "rotator cuff tendinopathy",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  } ],
+  "procedures" : [ {
+    "term_text" : "MRI of the left shoulder to evaluate for possible rotator cuff tendinopathy",
+    "omop_domain" : "procedure_occurrence"
+  }, {
+    "term_text" : "referral to formal physical therapy",
+    "omop_domain" : "procedure_occurrence"
+  } ],
+  "medications_and_treatments" : [ {
+    "term_text" : "Tylenol",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Tylenol as needed for pain",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  } ],
+  "tests" : [ {
+    "term_text" : "X-rays of the left shoulder were obtained and reviewed today",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ],
+  "clinical_narrative" : [ {
+    "term_text" : "renovating his basement and putting in a new ceiling",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "very active",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "left shoulder pain before that usually resolves with Tylenol",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "reaching, lifting, and overhead activities",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ]
+}

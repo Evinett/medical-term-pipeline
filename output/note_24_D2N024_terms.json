@@ -1,0 +1,37 @@
+{
+  "diagnoses" : [ {
+    "term_text" : "bilateral reduction mammoplasty",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Status post bilateral reduction mammoplasty",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  } ],
+  "procedures" : [ {
+    "term_text" : "bilateral reduction mammaplasty",
+    "omop_domain" : "procedure_occurrence"
+  }, {
+    "term_text" : "incisional scar massage",
+    "omop_domain" : "procedure_occurrence"
+  } ],
+  "medications_and_treatments" : [ {
+    "term_text" : "Mederma scar gel",
+    "omop_domain" : "device_exposure",
+    "OMOP_ID" : "0"
+  } ],
+  "tests" : [ {
+    "term_text" : "bilateral breast photos",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ],
+  "clinical_narrative" : [ {
+    "term_text" : "lump along the left breast",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "back pain",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ]
+}

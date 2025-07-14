@@ -1,0 +1,96 @@
+{
+  "diagnoses" : [ {
+    "term_text" : "ovarian cancer",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "depression",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "4149320"
+  } ],
+  "procedures" : [ {
+    "term_text" : "hysterectomy",
+    "omop_domain" : "procedure_occurrence"
+  }, {
+    "term_text" : "oophorectomy",
+    "omop_domain" : "procedure_occurrence"
+  }, {
+    "term_text" : "lymph node dissection",
+    "omop_domain" : "procedure_occurrence"
+  } ],
+  "medications_and_treatments" : [ {
+    "term_text" : "cisplatin",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Taxol",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  } ],
+  "tests" : [ {
+    "term_text" : "CT scan of the abdomen",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "CA-125",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "hCG",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "AFP",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "LDH",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "bimanual exam",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ],
+  "clinical_narrative" : [ {
+    "term_text" : "unintentional weight loss",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "abdominal pain",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "constipation",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "abnormal vaginal bleeding",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "slight tenderness to palpation of the left lower quadrant",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "no external lesions on the labia",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "normal vaginal vault",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "pink cervix without lesions",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "left adnexal mass",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "stage IIIA disease",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ]
+}

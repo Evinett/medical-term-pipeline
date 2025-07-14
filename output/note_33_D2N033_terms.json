@@ -1,0 +1,56 @@
+{
+  "diagnoses" : [ {
+    "term_text" : "Right knee pain",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "601620"
+  }, {
+    "term_text" : "Type 2 diabetes",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  } ],
+  "procedures" : [ {
+    "term_text" : "Refill on metformin",
+    "omop_domain" : "procedure_occurrence"
+  }, {
+    "term_text" : "Straight leg brace",
+    "omop_domain" : "procedure_occurrence"
+  }, {
+    "term_text" : "Refer to physical therapy",
+    "omop_domain" : "procedure_occurrence"
+  } ],
+  "medications_and_treatments" : [ {
+    "term_text" : "metformin 500 mg",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Mobic",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  } ],
+  "tests" : [ {
+    "term_text" : "Hemoglobin A1c",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "MRI",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Auscultation of Lungs: Clear bilaterally",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ],
+  "clinical_narrative" : [ {
+    "term_text" : "Some swelling present",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Some pain to palpation on the medial aspect of the right knee, and a little bit of pain on the lateral aspect of the right knee",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Limited range of motion as well as pain on both flexion and extension of the knee",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ]
+}

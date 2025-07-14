@@ -1,0 +1,129 @@
+Abnormal liver enzymes	
+Acid reflux with nausea and vomiting	
+Acne vulgaris	
+Acute esophagitis	
+Acute lumbar strain	
+Anaphylaxis	
+Anemia	439777
+Arthritis	
+Arthritis	
+Arthritis	
+Asthma	317009
+Atopic eczema	
+Atrial Fibrillation	
+Back pain	4046660
+Back pain	
+Back pain	
+Back pain	
+Bilateral breast cysts	
+Bilateral carpal tunnel syndrome	
+Bilateral medial epicondylitis	
+Bilateral reduction mammoplasty	
+Cervical radiculopathy	
+Chest pain	
+Chronic abdominal pain	
+Chronic back pain	
+Chronic back pain	
+Chronic Congestive Heart Failure	
+Chronic Congestive Heart Failure	
+Chronic obstructive pulmonary disease	
+Congestive heart failure	319835
+Constipation	
+COPD	
+Coronary Artery Disease	
+Depression	4149320
+Diabetes	
+Diabetes	
+Diabetes	
+Diabetes	
+Diabetes	
+Diabetes Mellitus	
+Diabetes Mellitus	
+Diabetes mellitus type 2	
+Diabetes mellitus type 2	
+Diabetes type 2	
+Diabetes Type II	
+Diarrhea	
+Difficulty swallowing	
+Difficulty urinating	
+Diverticulosis	
+Dyspnea	
+Elevated alkaline phosphate level	
+Epilepsy	
+Gallstones	
+Gastritis	
+Gastritis	
+Gout	
+Gout	
+Headache	
+Headache	
+Hepatitis C	198964
+High Blood Pressure	
+High cholesterol	
+History of aortic aneurysm repair	
+History of kidney stones in father	
+Hypercholesterolemia	
+Hypersensitivity pneumonitis	
+Hypertension	320128
+"Hypertension, uncontrolled"	
+Hypogonadism	
+Hypothyroidism	
+Hypothyroidism	
+Iron Deficiency Anemia	436659
+Iron Deficiency Anemia	
+Kidney disease	
+Kidney stone	
+Kidney stones	
+Kidney stones	
+Kidney stones	
+"Lateral ligament complex sprain, Right ankle"	
+Left ankle sprain of the lateral ligament complex	
+Left foot pain	
+Left shoulder pain	
+Left upper extremity neuropathy	
+Lisfranc fracture	
+Lisfranc fracture	
+"Lisfranc fracture, left foot"	
+"Lisfranc fracture, left foot"	
+Lumbar strain	
+Lumbar strain	
+Melanoma	
+Mild diverticulosis	
+Mood changes	
+Multiple soccer injuries in the past	
+Newly Reduced Left Ventricular Dysfunction and Moderate Mitral Regurgitation	
+Ovarian cancer	
+Patellofemoral pain syndrome	
+PCOS	
+Peripheral neuropathy	
+Positive for HIV	
+Possible medial collateral ligament strain	
+Recurrent lung infections	
+Right ankle fracture (20 years ago)	
+Right ankle sprain	
+Right ankle sprain	
+Right ankle sprain	
+Right ductal carcinoma in situ (DCIS)	
+Right elbow lateral epicondylitis	
+Right foot hallux rigidus	
+Right foot ulcer	
+Right hip degenerative joint disease	
+Right index finger hyperextension injury	
+Right knee pain	601620
+Right knee posterior cruciate ligament strain	
+Right knee sprain	
+Right knee sprain	
+Right leg contusion	
+Right middle finger distal phalanx fracture	
+Right proximal humerus fracture	
+Rotator cuff tendinopathy	
+Rotator cuff tendinopathy	
+Scalp psoriasis	
+Skin cancer	
+Stage 0 ER/PR-positive invasive ductal carcinoma of the right breast	
+Stenosing tenosynovitis of right index finger	
+Torn MCL	
+Transient tics	
+Type 2 diabetes	
+Type 2 diabetes	
+Vitamin D deficiency	

@@ -1,0 +1,38 @@
+{
+  "diagnoses" : [ {
+    "term_text" : "Lisfranc fracture",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  } ],
+  "procedures" : [ {
+    "term_text" : "Right foot ORIF and all indicated procedures",
+    "omop_domain" : "procedure_occurrence"
+  } ],
+  "medications_and_treatments" : [ ],
+  "tests" : [ {
+    "term_text" : "X-ray of the right foot",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "MRI of the right foot",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ],
+  "clinical_narrative" : [ {
+    "term_text" : "Right foot pain",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Numbness in his entire right foot",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Intermittent soreness and swelling in his right ankle since then",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Soreness and occasional giving way of the left ankle",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ]
+}

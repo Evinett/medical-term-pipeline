@@ -1,0 +1,57 @@
+{
+  "diagnoses" : [ {
+    "term_text" : "depression",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "4149320"
+  }, {
+    "term_text" : "Asthma",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "317009"
+  }, {
+    "term_text" : "Diabetes Type II",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  } ],
+  "procedures" : [ {
+    "term_text" : "Continue on albuterol, 2 puffs every 4-6 hours as needed",
+    "omop_domain" : "procedure_occurrence"
+  }, {
+    "term_text" : "Start on Zoloft 25 mg once a day",
+    "omop_domain" : "procedure_occurrence"
+  } ],
+  "medications_and_treatments" : [ {
+    "term_text" : "Prozac 20 mg daily",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Symbicort 2 puffs twice a day during the summer",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "metformin (increased to 1000 mg twice a day)",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  } ],
+  "tests" : [ {
+    "term_text" : "PFT (within normal limits)",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Diabetes panel (glucose and hemoglobin A1c elevated)",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "X-ray of the chest is unremarkable",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Repeat hemoglobin A1c in 3 months",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Continue to monitor blood glucose levels at home",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ],
+  "clinical_narrative" : [ ]
+}

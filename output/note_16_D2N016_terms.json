@@ -1,0 +1,53 @@
+{
+  "diagnoses" : [ {
+    "term_text" : "depression",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "4149320"
+  }, {
+    "term_text" : "hypertension",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "320128"
+  }, {
+    "term_text" : "uncontrolled hypertension",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  } ],
+  "procedures" : [ {
+    "term_text" : "rotator cuff repair",
+    "omop_domain" : "procedure_occurrence"
+  }, {
+    "term_text" : "Increase Norvasc to 10 mg daily",
+    "omop_domain" : "procedure_occurrence"
+  } ],
+  "medications_and_treatments" : [ {
+    "term_text" : "Norvasc",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  } ],
+  "tests" : [ {
+    "term_text" : "Labs (Creatinine)",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Electrocardiogram",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "lipid panel",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "echocardiogram",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ],
+  "clinical_narrative" : [ {
+    "term_text" : "mild swelling in his ankles, mainly near the end of the day",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "slight 3/6 systolic ejection murmur, stable",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ]
+}

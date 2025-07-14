@@ -1,0 +1,68 @@
+{
+  "diagnoses" : [ {
+    "term_text" : "anterior STEMI",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "CAD",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "coronary artery disease",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Newly reduced left ventricular dysfunction",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "moderate mitral regurgitation",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Hypertension",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "320128"
+  } ],
+  "procedures" : [ {
+    "term_text" : "RCA stent placement in 2018",
+    "omop_domain" : "procedure_occurrence"
+  }, {
+    "term_text" : "drug-eluting stent placement in the LAD",
+    "omop_domain" : "procedure_occurrence"
+  }, {
+    "term_text" : "cardiac cath lab",
+    "omop_domain" : "procedure_occurrence"
+  } ],
+  "medications_and_treatments" : [ {
+    "term_text" : "aspirin 81 mg daily",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Brilinta 90 mg twice a day",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Lipitor 80 mg daily",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Toprol 50 mg daily",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "lisinopril 20 mg a day",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Aldactone 12.5 mg daily",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  } ],
+  "tests" : [ {
+    "term_text" : "Electrocardiogram",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ],
+  "clinical_narrative" : [ ]
+}

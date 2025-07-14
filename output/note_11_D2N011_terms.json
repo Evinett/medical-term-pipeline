@@ -1,0 +1,46 @@
+{
+  "diagnoses" : [ {
+    "term_text" : "chest pain",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "hypertension",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "320128"
+  }, {
+    "term_text" : "coronary artery disease",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "pumping dysfunction",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  } ],
+  "procedures" : [ {
+    "term_text" : "cardiac catheterization",
+    "omop_domain" : "procedure_occurrence"
+  } ],
+  "medications_and_treatments" : [ {
+    "term_text" : "carvedilol 25 mg twice a day",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "lisinopril 10 mg a day",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  } ],
+  "tests" : [ {
+    "term_text" : "EKG is normal",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "echocardiogram demonstrates decreased ejection fraction",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  } ],
+  "clinical_narrative" : [ {
+    "term_text" : "short of breath",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ]
+}

@@ -1,0 +1,46 @@
+{
+  "diagnoses" : [ {
+    "term_text" : "Congestive heart failure",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "319835"
+  }, {
+    "term_text" : "Hypertension",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "320128"
+  } ],
+  "procedures" : [ {
+    "term_text" : "Renal artery ultrasound ordered to rule out any issues such as renal artery stenosis",
+    "omop_domain" : "procedure_occurrence"
+  } ],
+  "medications_and_treatments" : [ {
+    "term_text" : "Bumex 2 mg once daily",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Cozaar 100 mg daily",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Norvasc 5 mg once daily",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  } ],
+  "tests" : [ {
+    "term_text" : "Echocardiogram reveals a preserved ejection fraction of 55%, abnormal diastolic filling, and mild-to-moderate mitral regurgitation",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Labs will be ordered to assess her response to new medications",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ],
+  "clinical_narrative" : [ {
+    "term_text" : "dietary indiscretion",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "uncontrolled hypertension",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ]
+}

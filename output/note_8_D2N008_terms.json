@@ -1,0 +1,57 @@
+{
+  "diagnoses" : [ {
+    "term_text" : "congestive heart failure",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "319835"
+  }, {
+    "term_text" : "kidney stones",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Anemia",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "439777"
+  } ],
+  "procedures" : [ {
+    "term_text" : "Order an anemia profile for further evaluation",
+    "omop_domain" : "procedure_occurrence"
+  }, {
+    "term_text" : "Refer her back to gastroenterology for repeat evaluation with possible endoscopy and colonoscopy",
+    "omop_domain" : "procedure_occurrence"
+  } ],
+  "medications_and_treatments" : [ {
+    "term_text" : "Lasix 40 mg once daily",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Toprol 50 mg daily",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "lisinopril 10 mg daily",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  } ],
+  "tests" : [ {
+    "term_text" : "Echocardiogram demonstrates decreased ejection fraction of 45%",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Moderate mitral regurgitation",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Hemoglobin is 8.2",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Trace to 1+ edema in the bilateral ankles",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  } ],
+  "clinical_narrative" : [ {
+    "term_text" : "bilateral leg swelling",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ]
+}

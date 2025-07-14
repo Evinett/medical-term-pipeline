@@ -1,0 +1,60 @@
+{
+  "diagnoses" : [ {
+    "term_text" : "bilateral breast cysts",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "anxiety",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "breast cancer (family history)",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  } ],
+  "procedures" : [ {
+    "term_text" : "Covid vaccinations",
+    "omop_domain" : "procedure_occurrence"
+  }, {
+    "term_text" : "follow-up bilateral breast cysts",
+    "omop_domain" : "procedure_occurrence"
+  }, {
+    "term_text" : "continue close monitoring and refer to breast specialist",
+    "omop_domain" : "procedure_occurrence"
+  } ],
+  "medications_and_treatments" : [ {
+    "term_text" : "progesterone",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "vaginal cream",
+    "omop_domain" : "device_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Buspar",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Singulair",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Camila birth control",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  } ],
+  "tests" : [ {
+    "term_text" : "pap smear is negative/negative (2019)",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "pap smear is abnormal (2009)",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "physical exam, genitourinary, breast density",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ],
+  "clinical_narrative" : [ ]
+}

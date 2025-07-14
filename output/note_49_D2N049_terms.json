@@ -1,0 +1,95 @@
+{
+  "diagnoses" : [ {
+    "term_text" : "hypertension",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "320128"
+  }, {
+    "term_text" : "diabetes",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "kidney stones",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Kidney stone",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  } ],
+  "procedures" : [ {
+    "term_text" : "Prescription for oxycodone 5 mg every 6 to 8 hours as needed for pain",
+    "omop_domain" : "procedure_occurrence"
+  }, {
+    "term_text" : "Referral to urology",
+    "omop_domain" : "procedure_occurrence"
+  }, {
+    "term_text" : "Limit salt intake to 2300 mg daily",
+    "omop_domain" : "procedure_occurrence"
+  }, {
+    "term_text" : "Referral to a dietitian",
+    "omop_domain" : "procedure_occurrence"
+  } ],
+  "medications_and_treatments" : [ {
+    "term_text" : "Tylenol",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "ibuprofen",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Norvasc 2.5 mg daily",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "metformin 500 mg daily",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Tylenol (recommended for breakthrough pain)",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Norvasc 2.5 mg (continue)",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "metformin 500 mg daily (continue)",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  } ],
+  "tests" : [ {
+    "term_text" : "Hemoglobin A1c is reviewed at 7.3",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Auscultation of Lungs: Clear bilaterally. No wheezes, rales, or rhonchi.",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Auscultation of Heart: Grade 2 out of 6 systolic ejection murmur, unchanged.",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Home blood pressure monitoring",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "4099651"
+  }, {
+    "term_text" : "Home glucose monitoring before meals",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ],
+  "clinical_narrative" : [ {
+    "term_text" : "Left-sided back pain",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Grade 2 out of 6 systolic ejection murmur",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Tenderness to palpation of the abdomen",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "40482051"
+  } ]
+}

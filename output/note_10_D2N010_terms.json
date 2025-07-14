@@ -1,0 +1,34 @@
+{
+  "diagnoses" : [ {
+    "term_text" : "high blood sugar",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Hyperglycemia",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  } ],
+  "procedures" : [ {
+    "term_text" : "order a western blot PCR to evaluate for Lyme disease",
+    "omop_domain" : "procedure_occurrence"
+  } ],
+  "medications_and_treatments" : [ {
+    "term_text" : "amoxicillin 500 mg 3 times a day for 10 days",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  } ],
+  "tests" : [ {
+    "term_text" : "Lyme titer is elevated",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "rapid strep test is positive",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  } ],
+  "clinical_narrative" : [ {
+    "term_text" : "joint pain in his right knee",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ]
+}

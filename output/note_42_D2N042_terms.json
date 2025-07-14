@@ -1,0 +1,35 @@
+{
+  "diagnoses" : [ {
+    "term_text" : "Lateral ligament complex sprain",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "anterior talofibular ligament sprain",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  } ],
+  "procedures" : [ {
+    "term_text" : "Keep leg elevated when seated",
+    "omop_domain" : "procedure_occurrence"
+  }, {
+    "term_text" : "Icing the ankle",
+    "omop_domain" : "procedure_occurrence"
+  }, {
+    "term_text" : "Aircast to help stabilize the ankle",
+    "omop_domain" : "procedure_occurrence"
+  }, {
+    "term_text" : "Order crutches for non-weight-bearing",
+    "omop_domain" : "procedure_occurrence"
+  } ],
+  "medications_and_treatments" : [ {
+    "term_text" : "ibuprofen",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  } ],
+  "tests" : [ {
+    "term_text" : "X-ray images of the right ankle were obtained and reviewed today",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ],
+  "clinical_narrative" : [ ]
+}

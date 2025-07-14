@@ -1,0 +1,73 @@
+{
+  "diagnoses" : [ {
+    "term_text" : "congestive heart failure",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "319835"
+  }, {
+    "term_text" : "depression",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "4149320"
+  }, {
+    "term_text" : "hypertension",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "320128"
+  } ],
+  "procedures" : [ {
+    "term_text" : "initiate Lasix 20 mg daily",
+    "omop_domain" : "procedure_occurrence"
+  }, {
+    "term_text" : "schedule mammogram",
+    "omop_domain" : "procedure_occurrence"
+  } ],
+  "medications_and_treatments" : [ {
+    "term_text" : "lisinopril",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "increase lisinopril to 40 mg daily",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  } ],
+  "tests" : [ {
+    "term_text" : "echocardiogram demonstrates decreased ejection fraction of 45% and mitral regurgitation",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "lipid panel shows elevated cholesterol",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "repeat echocardiogram",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "repeat lipid panel",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "monitor blood pressures at home for the next week",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ],
+  "clinical_narrative" : [ {
+    "term_text" : "decreased ejection fraction of 45%",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "mitral regurgitation is present",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "4324203"
+  }, {
+    "term_text" : "weekly therapy has been helpful",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "elevated cholesterol",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "inconsistent use of blood pressure medication",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ]
+}

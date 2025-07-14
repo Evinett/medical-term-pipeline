@@ -1,0 +1,29 @@
+# Maven build output
+target/
+
+# Log files
+*.log
+
+# IDE configuration files
+.idea/
+*.iml
+*.ipr
+*.iws
+.classpath
+.project
+.settings/
+*.nbproject/
+
+# Maven-specific files
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+
+# macOS
+.DS_Store
+
+# JVM crash logs
+hs_err_pid*

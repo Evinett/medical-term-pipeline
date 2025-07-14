@@ -1,0 +1,61 @@
+{
+  "diagnoses" : [ {
+    "term_text" : "Hepatitis C",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "198964"
+  } ],
+  "procedures" : [ {
+    "term_text" : "ultrasound elastography to evaluate for fibrosis of the liver",
+    "omop_domain" : "procedure_occurrence"
+  }, {
+    "term_text" : "confirm diagnosis with additional blood work including checking his hepatitis C RNA and HCV genotype",
+    "omop_domain" : "procedure_occurrence"
+  } ],
+  "medications_and_treatments" : [ ],
+  "tests" : [ {
+    "term_text" : "hepatitis C antibody test",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "all vital signs are within normal limits",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Liver panel revealed an elevated AST at 39 U/L",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "ALT, albumin, and total bilirubin were all within normal limits",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ],
+  "clinical_narrative" : [ {
+    "term_text" : "intravenous drug use",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "heavy alcohol use",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "smoking 1 to 2 cigarettes per day",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "high blood pressure",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "diabetes",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "depression",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Grade 2 out of 6 systolic ejection murmur",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ]
+}

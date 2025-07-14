@@ -1,0 +1,69 @@
+{
+  "diagnoses" : [ {
+    "term_text" : "Left upper extremity neuropathy",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Cervical radiculopathy",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Arthritis",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  } ],
+  "procedures" : [ {
+    "term_text" : "Cervical MRI",
+    "omop_domain" : "procedure_occurrence"
+  }, {
+    "term_text" : "Left C7-T1 epidural",
+    "omop_domain" : "procedure_occurrence"
+  } ],
+  "medications_and_treatments" : [ {
+    "term_text" : "Gabapentin tablet",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Prednisone tablet",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  } ],
+  "tests" : [ {
+    "term_text" : "X-ray Cervical Spine, 06/04/2021",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Hemoglobin A1c is elevated at 8",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "40762352"
+  } ],
+  "clinical_narrative" : [ {
+    "term_text" : "Left arm pain",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Pinched nerve",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Peripheral neuropathy",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Neuropathy in one leg from his knee to his foot",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "1% disability for peripheral neuropathy",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "History of left finger injury",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Mild lateral neck pain",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ]
+}

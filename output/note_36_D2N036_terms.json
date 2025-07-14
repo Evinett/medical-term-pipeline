@@ -1,0 +1,25 @@
+{
+  "diagnoses" : [ {
+    "term_text" : "bilateral carpal tunnel syndrome",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  } ],
+  "procedures" : [ {
+    "term_text" : "wear a wrist splint",
+    "omop_domain" : "procedure_occurrence"
+  }, {
+    "term_text" : "limit active repetitive motions while working for the next 2 weeks",
+    "omop_domain" : "procedure_occurrence"
+  } ],
+  "medications_and_treatments" : [ {
+    "term_text" : "ibuprofen 600 mg every 6 hours",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  } ],
+  "tests" : [ {
+    "term_text" : "EMG of the bilateral upper extremities",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ],
+  "clinical_narrative" : [ ]
+}

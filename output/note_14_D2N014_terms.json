@@ -1,0 +1,52 @@
+{
+  "diagnoses" : [ {
+    "term_text" : "congestive heart failure",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "319835"
+  }, {
+    "term_text" : "basal cell carcinoma",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  } ],
+  "procedures" : [ {
+    "term_text" : "ED follow-up",
+    "omop_domain" : "procedure_occurrence"
+  }, {
+    "term_text" : "Status post cataract extraction",
+    "omop_domain" : "procedure_occurrence"
+  }, {
+    "term_text" : "Status post basal cell carcinoma removal",
+    "omop_domain" : "procedure_occurrence"
+  } ],
+  "medications_and_treatments" : [ {
+    "term_text" : "Lasix 80 mg once a day",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "carvedilol 25 mg twice a day",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  } ],
+  "tests" : [ {
+    "term_text" : "ECG revealed left ventricular hypertrophy consistent with congestive heart failure",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Echocardiogram demonstrates stable diminished ejection fraction",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Skin cancer pathology demonstrates clear margins",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ],
+  "clinical_narrative" : [ {
+    "term_text" : "playing tennis on Saturday",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "struggling to breathe",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "0"
+  } ]
+}
