@@ -1,43 +1,22 @@
 {
-  "type": "object",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Clinical Term Extraction Schema",
-  "description": "Defines the structure for extracted clinical terms from a medical note.",
+  "title": "Extracted Medical Terms",
+  "type": "object",
   "properties": {
     "diagnoses": {
-      "description": "List of identified diagnoses or conditions.",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/term"
-      }
+      "$ref": "#/definitions/structuredTermArray"
     },
     "procedures": {
-      "description": "List of performed or planned procedures.",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/term"
-      }
+      "$ref": "#/definitions/structuredTermArray"
     },
     "medications_and_treatments": {
-      "description": "List of prescribed or administered medications and treatments.",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/medicationTerm"
-      }
+      "$ref": "#/definitions/medicationTermArray"
     },
     "tests": {
-      "description": "List of diagnostic tests and their results.",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/term"
-      }
+      "$ref": "#/definitions/structuredTermArray"
     },
     "clinical_narrative": {
-      "description": "List of other relevant clinical information, symptoms, or findings.",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/term"
-      }
+      "$ref": "#/definitions/narrativeTermArray"
     }
   },
   "required": [
@@ -47,26 +26,20 @@
     "tests",
     "clinical_narrative"
   ],
-  "additionalProperties": false,
   "definitions": {
-    "term": {
+    "structuredTermObject": {
       "type": "object",
       "properties": {
         "term_text": {
           "type": "string",
-          "description": "The exact text extracted from the note."
+          "minLength": 1
         },
         "omop_domain": {
           "type": "string",
-          "description": "The corresponding OMOP CDM domain.",
-          "enum": [
-            "condition_occurrence",
-            "procedure_occurrence",
-            "drug_exposure",
-            "device_exposure",
-            "measurement",
-            "observation"
-          ]
+          "minLength": 1
+        },
+        "OMOP_ID": {
+          "type": "string"
         }
       },
       "required": [
@@ -75,26 +48,22 @@
       ],
       "additionalProperties": false
     },
-    "medicationTerm": {
+    "medicationTermObject": {
       "type": "object",
       "properties": {
         "term_text": {
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "omop_domain": {
           "type": "string",
-          "enum": ["drug_exposure", "device_exposure"]
+          "minLength": 1
+        },
+        "OMOP_ID": {
+          "type": "string"
         },
         "details": {
-          "type": "object",
-          "properties": {
-            "drug_name": { "type": "string" },
-            "strength": { "type": "string" },
-            "route": { "type": "string" },
-            "frequency": { "type": "string" },
-            "reason": { "type": "string" }
-          },
-          "additionalProperties": false
+          "type": "object"
         }
       },
       "required": [
@@ -102,7 +71,31 @@
         "omop_domain"
       ],
       "additionalProperties": false
+    },
+    "narrativeTermObject": {
+      "type": "object",
+      "properties": {
+        "term_text": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "term_text"
+      ],
+      "additionalProperties": false
+    },
+    "structuredTermArray": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/structuredTermObject" }
+    },
+    "medicationTermArray": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/medicationTermObject" }
+    },
+    "narrativeTermArray": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/narrativeTermObject" }
     }
   }
 }
-

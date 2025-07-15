@@ -20,10 +20,12 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.Duration;
+import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.List;
 import java.util.HashSet;
+import java.util.stream.Stream;
 import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.ExecutorService;
@@ -36,6 +38,7 @@ public class ClinicalNoteProcessor {
 
     private static final Logger logger = LoggerFactory.getLogger(ClinicalNoteProcessor.class);
     private static final ObjectMapper objectMapper = new ObjectMapper();
+    private static final String DEFAULT_OMOP_ID = "0";
 
     private final String inputDir;
     private final String outputDir;
@@ -43,6 +46,9 @@ public class ClinicalNoteProcessor {
     private final JsonSchema schema;
     private final int numThreads;
 
+    private final Map<String, String> conditionMap;
+    private final Map<String, String> medicationMap;
+    private final Map<String, String> observationMap;
     public ClinicalNoteProcessor() throws IOException {
         Properties config = ConfigLoader.loadConfig();
 
@@ -58,6 +64,12 @@ public class ClinicalNoteProcessor {
         this.numThreads = Integer.parseInt(config.getProperty("processing.numThreads", "10"));
 
         this.ollamaClient = new OllamaClient(ollamaModel, ollamaApiUrl, maxRetries, retryDelayMs, requestTimeoutMinutes);
+
+        // Load OMOP ID mapping files
+        Path inputPath = Paths.get(this.inputDir);
+        this.conditionMap = loadTermMap(inputPath.resolve("conditions-map.txt"));
+        this.medicationMap = loadTermMap(inputPath.resolve("medications-map.txt"));
+        this.observationMap = loadTermMap(inputPath.resolve("observations-map.txt"));
 
         // Load the JSON schema for validation
         try (InputStream schemaStream = getClass().getClassLoader().getResourceAsStream("output_schema.json")) {
@@ -328,7 +340,31 @@ public class ClinicalNoteProcessor {
 
             ObjectNode structuredTerm = objectMapper.createObjectNode();
             structuredTerm.put("term_text", termText);
-            structuredTerm.put("omop_domain", mapCategoryToOmopDomain(category, termText));
+
+            // Only assign an OMOP domain if the term is not part of the clinical narrative.
+            if (!"clinical_narrative".equals(category)) {
+                structuredTerm.put("omop_domain", mapCategoryToOmopDomain(category, termText));
+
+                // --- START: OMOP ID Integration ---
+                String omopId = DEFAULT_OMOP_ID;
+                String termToLookUp = termText.trim().toLowerCase();
+
+                switch (category) {
+                    case "diagnoses":
+                        omopId = this.conditionMap.getOrDefault(termToLookUp, DEFAULT_OMOP_ID);
+                        break;
+                    case "medications_and_treatments":
+                        // Prioritize looking up a specific drug_name if available, otherwise use the full term.
+                        String medTerm = termNode.path("details").path("drug_name").asText(termText).trim().toLowerCase();
+                        omopId = this.medicationMap.getOrDefault(medTerm, DEFAULT_OMOP_ID);
+                        break;
+                    case "tests":
+                        omopId = this.observationMap.getOrDefault(termToLookUp, DEFAULT_OMOP_ID);
+                        break;
+                }
+                structuredTerm.put("OMOP_ID", omopId);
+                // --- END: OMOP ID Integration ---
+            }
 
             // If the term is a medication and has details, copy them over
             if ("medications_and_treatments".equals(category) && termNode.has("details")) {
@@ -414,8 +450,7 @@ public class ClinicalNoteProcessor {
                     return "device_exposure";
                 }
                 return "drug_exposure";
-            case "tests": // Both tests and narrative can contain measurements or observations
-            case "clinical_narrative":
+            case "tests":
                 return termIsMeasurement(lowerTerm) ? "measurement" : "observation";
             default:
                 return "observation";
@@ -450,6 +485,25 @@ public class ClinicalNoteProcessor {
         } catch (IOException e) {
             logger.error("Error writing file to {}", outputFilePath, e);
         }
+    }
+
+    private Map<String, String> loadTermMap(Path mapFilePath) throws IOException {
+        Map<String, String> map = new HashMap<>();
+        if (!Files.exists(mapFilePath)) {
+            logger.warn("Mapping file not found, skipping: {}", mapFilePath);
+            return map; // Return an empty map if the file doesn't exist
+        }
+        try (Stream<String> lines = Files.lines(mapFilePath)) {
+            lines.filter(line -> !line.isBlank() && line.contains("\t"))
+                 .forEach(line -> {
+                     String[] parts = line.split("\t", 2); // Always convert map keys to lowercase for consistent matching
+                     String term = parts[0].trim().replace("\"", "").toLowerCase();
+                     String id = parts[1].trim();
+                     if (!term.isEmpty() && !id.isEmpty()) map.put(term, id);
+                 });
+        }
+        logger.info("Loaded {} terms from {}", map.size(), mapFilePath.getFileName());
+        return map;
     }
 
     private String createSystemPrompt() {
