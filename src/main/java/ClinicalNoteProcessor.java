@@ -49,6 +49,8 @@ public class ClinicalNoteProcessor {
     private final Map<String, String> conditionMap;
     private final Map<String, String> medicationMap;
     private final Map<String, String> observationMap;
+    private final Map<String, String> procedureMap;
+
     public ClinicalNoteProcessor() throws IOException {
         Properties config = ConfigLoader.loadConfig();
 
@@ -69,6 +71,7 @@ public class ClinicalNoteProcessor {
         this.conditionMap = loadTermMap("conditions-map.txt");
         this.medicationMap = loadTermMap("medications-map.txt");
         this.observationMap = loadTermMap("observations-map.txt");
+        this.procedureMap = loadTermMap("procedures-map.txt");
 
         // Load the JSON schema for validation
         try (InputStream schemaStream = getClass().getClassLoader().getResourceAsStream("output_schema.json")) {
@@ -337,6 +340,33 @@ public class ClinicalNoteProcessor {
                 category = "diagnoses"; // Re-assign the category to ensure it's treated as a condition.
             }
 
+            // --- PROCEDURE FILTERING LOGIC ---
+            if ("procedures".equals(category)) {
+                String omopId = this.conditionMap.getOrDefault(termText.trim().toLowerCase(), DEFAULT_OMOP_ID);
+                // If the OMOP_ID is not found in the procedures map, exclude or move to narrative
+                String procOmopId = this.conditionMap.getOrDefault(termText.trim().toLowerCase(), DEFAULT_OMOP_ID);
+                // Use the correct map for procedures
+                procOmopId = this.conditionMap.getOrDefault(termText.trim().toLowerCase(), DEFAULT_OMOP_ID);
+                // Actually, use a dedicated procedure map if available, else fallback to conditionMap
+                if (this.procedureMap != null) {
+                    procOmopId = this.procedureMap.getOrDefault(termText.trim().toLowerCase(), DEFAULT_OMOP_ID);
+                }
+                boolean isReferral = termText.toLowerCase().matches("refer(ral)? to .*");
+                if (procOmopId.equals(DEFAULT_OMOP_ID)) {
+                    if (isReferral) {
+                        // Move to clinical_narrative
+                        ObjectNode structuredTerm = objectMapper.createObjectNode();
+                        structuredTerm.put("term_text", termText);
+                        narrative.add(structuredTerm);
+                        continue;
+                    } else {
+                        // Exclude non-clinical/non-OMOP procedures (e.g., 'golfing')
+                        logger.debug("Excluding non-OMOP procedure: '{}'", termText);
+                        continue;
+                    }
+                }
+            }
+
             ObjectNode structuredTerm = objectMapper.createObjectNode();
             structuredTerm.put("term_text", termText);
 
@@ -359,6 +389,14 @@ public class ClinicalNoteProcessor {
                         break;
                     case "tests":
                         omopId = this.observationMap.getOrDefault(termToLookUp, DEFAULT_OMOP_ID);
+                        break;
+                    case "procedures":
+                        // Use the correct map for procedures
+                        if (this.procedureMap != null) {
+                            omopId = this.procedureMap.getOrDefault(termToLookUp, DEFAULT_OMOP_ID);
+                        } else {
+                            omopId = this.conditionMap.getOrDefault(termToLookUp, DEFAULT_OMOP_ID);
+                        }
                         break;
                 }
                 structuredTerm.put("OMOP_ID", omopId);
@@ -423,6 +461,7 @@ public class ClinicalNoteProcessor {
             case "CARDIOVASCULAR":
             case "MUSCULOSKELETAL":
             case "MEDICAL REASONING": // From A&P section
+            case "HISTORY": // Map HISTORY to clinical_narrative to include such terms in the output
                 return "clinical_narrative";
 
             default:

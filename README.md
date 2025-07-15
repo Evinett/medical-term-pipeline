@@ -63,6 +63,35 @@ Before you begin, ensure you have the following installed:
 
 
 
+## Project Structure
+
+```plaintext
+.
+├── input/
+│   ├── conditions-map.txt
+│   └── note1.txt
+├── output/
+│   └── note1_terms.json
+├── src/
+│   └── main/
+│       ├── java/
+│       │   └── com/
+│       │       └── example/
+│       │           ├── ClinicalNoteProcessor.java
+│       │           ├── OllamaClient.java
+│       │           └── TermSearcher.java
+│       └── resources/
+│           ├── config.properties
+│           ├── logback.xml
+│           └── output_schema.json
+├── pom.xml
+└── README.md
+```
+
+
+
+
+
 ---
 
 ## Usage
