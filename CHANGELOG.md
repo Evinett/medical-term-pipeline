@@ -11,9 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Created `CHANGELOG.md` to track project changes.
 - Integrated OMOP ID mapping directly into `ClinicalNoteProcessor` to streamline the data processing pipeline.
 - Implemented a flexible JSON schema (`output_schema.json`) that allows `clinical_narrative` terms to exist without an `omop_domain`.
+- Added `procedureMap` and logic to only include valid OMOP procedures in the `procedures` category, moving referrals to `clinical_narrative` and excluding non-clinical activities.
+- Mapped the LLM category `HISTORY` to `clinical_narrative` to prevent warnings and ensure correct categorization.
 
 ### Changed
 - The `omop_domain` field is no longer added to terms in the `clinical_narrative` category, aligning with the updated schema.
+- Improved concurrency and file skipping logic in `ClinicalNoteProcessor` for better performance.
 
 ### Removed
 - Deleted the redundant `OmopIdUpdater.java` file, as its functionality is now part of `ClinicalNoteProcessor`.
@@ -21,3 +24,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Resolved JSON validation failures by modifying the schema instead of using placeholder values in the Java code.
 - Corrected a Java compilation error caused by a misplaced method outside the main class definition.
+- Fixed warnings for unknown LLM categories by mapping `HISTORY` to `clinical_narrative`.
+- Ensured only valid OMOP procedures are included in output, with referrals and non-clinical activities handled appropriately.
