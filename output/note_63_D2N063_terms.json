@@ -1,7 +1,75 @@
 {
-  "diagnoses" : [ ],
-  "procedures" : [ ],
-  "medications_and_treatments" : [ ],
-  "tests" : [ ],
-  "clinical_narrative" : [ ]
+  "diagnoses" : [ {
+    "term_text" : "dyspnea",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "diabetes",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "congestive heart failure",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "319835"
+  }, {
+    "term_text" : "chronic obstructive pulmonary disease",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "exacerbation of congestive heart failure",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "diabetes type 2",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  } ],
+  "procedures" : [ {
+    "term_text" : "increase dose of Lasix from 20 mg to 60 mg for the next 4 days",
+    "omop_domain" : "procedure_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "physical therapy",
+    "omop_domain" : "procedure_occurrence",
+    "OMOP_ID" : "0"
+  } ],
+  "medications_and_treatments" : [ {
+    "term_text" : "Lasix",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "albuterol",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Atrovent",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "metformin",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Naprosyn",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Flexeril",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  } ],
+  "tests" : [ {
+    "term_text" : "Hemoglobin A1c is 7.5",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "repeat hemoglobin A1c",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  } ],
+  "clinical_narrative" : [ {
+    "term_text" : "10 pound weight gain"
+  }, {
+    "term_text" : "elevated blood glucose levels"
+  } ]
 }

@@ -14,10 +14,12 @@
   } ],
   "procedures" : [ {
     "term_text" : "initiate Lasix 20 mg daily",
-    "omop_domain" : "procedure_occurrence"
+    "omop_domain" : "procedure_occurrence",
+    "OMOP_ID" : "0"
   }, {
     "term_text" : "schedule mammogram",
-    "omop_domain" : "procedure_occurrence"
+    "omop_domain" : "procedure_occurrence",
+    "OMOP_ID" : "0"
   } ],
   "medications_and_treatments" : [ {
     "term_text" : "lisinopril",
@@ -50,24 +52,14 @@
     "OMOP_ID" : "0"
   } ],
   "clinical_narrative" : [ {
-    "term_text" : "decreased ejection fraction of 45%",
-    "omop_domain" : "measurement",
-    "OMOP_ID" : "0"
+    "term_text" : "decreased ejection fraction of 45%"
   }, {
-    "term_text" : "mitral regurgitation is present",
-    "omop_domain" : "observation",
-    "OMOP_ID" : "4324203"
+    "term_text" : "mitral regurgitation is present"
   }, {
-    "term_text" : "weekly therapy has been helpful",
-    "omop_domain" : "observation",
-    "OMOP_ID" : "0"
+    "term_text" : "weekly therapy has been helpful"
   }, {
-    "term_text" : "elevated cholesterol",
-    "omop_domain" : "observation",
-    "OMOP_ID" : "0"
+    "term_text" : "elevated cholesterol"
   }, {
-    "term_text" : "inconsistent use of blood pressure medication",
-    "omop_domain" : "observation",
-    "OMOP_ID" : "0"
+    "term_text" : "inconsistent use of blood pressure medication"
   } ]
 }

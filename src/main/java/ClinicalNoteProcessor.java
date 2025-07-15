@@ -66,10 +66,9 @@ public class ClinicalNoteProcessor {
         this.ollamaClient = new OllamaClient(ollamaModel, ollamaApiUrl, maxRetries, retryDelayMs, requestTimeoutMinutes);
 
         // Load OMOP ID mapping files
-        Path inputPath = Paths.get(this.inputDir);
-        this.conditionMap = loadTermMap(inputPath.resolve("conditions-map.txt"));
-        this.medicationMap = loadTermMap(inputPath.resolve("medications-map.txt"));
-        this.observationMap = loadTermMap(inputPath.resolve("observations-map.txt"));
+        this.conditionMap = loadTermMap("conditions-map.txt");
+        this.medicationMap = loadTermMap("medications-map.txt");
+        this.observationMap = loadTermMap("observations-map.txt");
 
         // Load the JSON schema for validation
         try (InputStream schemaStream = getClass().getClassLoader().getResourceAsStream("output_schema.json")) {
@@ -487,22 +486,26 @@ public class ClinicalNoteProcessor {
         }
     }
 
-    private Map<String, String> loadTermMap(Path mapFilePath) throws IOException {
+    private Map<String, String> loadTermMap(String mapFileName) throws IOException {
         Map<String, String> map = new HashMap<>();
-        if (!Files.exists(mapFilePath)) {
-            logger.warn("Mapping file not found, skipping: {}", mapFilePath);
-            return map; // Return an empty map if the file doesn't exist
+        try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream(mapFileName)) {
+            if (inputStream == null) {
+                logger.warn("Mapping file not found in resources, skipping: {}", mapFileName);
+                return map; // Return an empty map if the file doesn't exist
+            }
+
+            try (var reader = new java.io.InputStreamReader(inputStream);
+                 var lines = new java.io.BufferedReader(reader).lines()) {
+                lines.filter(line -> !line.isBlank() && line.contains("\t"))
+                     .forEach(line -> {
+                         String[] parts = line.split("\t", 2); // Always convert map keys to lowercase for consistent matching
+                         String term = parts[0].trim().replace("\"", "").toLowerCase();
+                         String id = parts[1].trim();
+                         if (!term.isEmpty() && !id.isEmpty()) map.put(term, id);
+                     });
+            }
         }
-        try (Stream<String> lines = Files.lines(mapFilePath)) {
-            lines.filter(line -> !line.isBlank() && line.contains("\t"))
-                 .forEach(line -> {
-                     String[] parts = line.split("\t", 2); // Always convert map keys to lowercase for consistent matching
-                     String term = parts[0].trim().replace("\"", "").toLowerCase();
-                     String id = parts[1].trim();
-                     if (!term.isEmpty() && !id.isEmpty()) map.put(term, id);
-                 });
-        }
-        logger.info("Loaded {} terms from {}", map.size(), mapFilePath.getFileName());
+        logger.info("Loaded {} terms from {}", map.size(), mapFileName);
         return map;
     }
 

@@ -1,7 +1,75 @@
 {
-  "diagnoses" : [ ],
-  "procedures" : [ ],
-  "medications_and_treatments" : [ ],
-  "tests" : [ ],
+  "diagnoses" : [ {
+    "term_text" : "congestive heart failure",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "319835"
+  }, {
+    "term_text" : "type 2 diabetes",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "back pain",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "4046660"
+  }, {
+    "term_text" : "Grade 2/6 systolic ejection murmur",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Acute lumbar strain",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Diabetes type 2",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  } ],
+  "procedures" : [ {
+    "term_text" : "golfing",
+    "omop_domain" : "procedure_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Refer to physical therapy",
+    "omop_domain" : "procedure_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Increase metformin to 1000 mg twice daily",
+    "omop_domain" : "procedure_occurrence",
+    "OMOP_ID" : "0"
+  } ],
+  "medications_and_treatments" : [ {
+    "term_text" : "Tylenol",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "ibuprofen",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "meloxicam 15 mg once daily",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "lisinopril 20 mg once daily",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Lasix",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  } ],
+  "tests" : [ {
+    "term_text" : "X-ray lumbar spine is unremarkable",
+    "omop_domain" : "observation",
+    "OMOP_ID" : "40482354"
+  }, {
+    "term_text" : "Hemoglobin A1c is elevated at 8",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "40762352"
+  }, {
+    "term_text" : "Repeat hemoglobin A1c in a couple of months",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  } ],
   "clinical_narrative" : [ ]
 }

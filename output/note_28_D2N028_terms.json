@@ -1,7 +1,75 @@
 {
-  "diagnoses" : [ ],
-  "procedures" : [ ],
-  "medications_and_treatments" : [ ],
-  "tests" : [ ],
-  "clinical_narrative" : [ ]
+  "diagnoses" : [ {
+    "term_text" : "abdominal pain",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "chronic abdominal pain",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "constipation",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  } ],
+  "procedures" : [ {
+    "term_text" : "Start daily fiber supplement",
+    "omop_domain" : "procedure_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Increase water consumption to at least 48 ounces daily",
+    "omop_domain" : "procedure_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Avoid trigger foods that may cause episodes of diarrhea",
+    "omop_domain" : "procedure_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Repeat liver enzyme labs today",
+    "omop_domain" : "procedure_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Schedule a liver ultrasound pending lab results",
+    "omop_domain" : "procedure_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Encouraged to cease alcohol consumption",
+    "omop_domain" : "procedure_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Patient to contact his PCP to discuss alternative medications",
+    "omop_domain" : "procedure_occurrence",
+    "OMOP_ID" : "0"
+  } ],
+  "medications_and_treatments" : [ {
+    "term_text" : "Crestor",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "olmesartan daily",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Tylenol as needed for pain",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  } ],
+  "tests" : [ {
+    "term_text" : "CT scan of abdomen (01/23/2020)",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  } ],
+  "clinical_narrative" : [ {
+    "term_text" : "constipation"
+  }, {
+    "term_text" : "diarrhea"
+  }, {
+    "term_text" : "mild left periumbilical tenderness to palpation"
+  }, {
+    "term_text" : "mild hepatomegaly"
+  }, {
+    "term_text" : "increased stool burden in colon"
+  }, {
+    "term_text" : "elevated liver enzymes (AST and ALT)"
+  } ]
 }

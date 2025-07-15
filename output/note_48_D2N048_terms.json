@@ -1,7 +1,31 @@
 {
-  "diagnoses" : [ ],
-  "procedures" : [ ],
-  "medications_and_treatments" : [ ],
-  "tests" : [ ],
-  "clinical_narrative" : [ ]
+  "diagnoses" : [ {
+    "term_text" : "Lisfranc fracture",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Right foot pain",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  } ],
+  "procedures" : [ {
+    "term_text" : "Right foot ORIF and all indicated procedures",
+    "omop_domain" : "procedure_occurrence",
+    "OMOP_ID" : "0"
+  } ],
+  "medications_and_treatments" : [ {
+    "term_text" : "Ibuprofen",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  } ],
+  "tests" : [ {
+    "term_text" : "3 views of the right foot were taken",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  } ],
+  "clinical_narrative" : [ {
+    "term_text" : "Subtle dorsal displacement of the base of the 2nd metatarsal with a 3 mm separation of the 1st and 2nd metatarsal bases"
+  }, {
+    "term_text" : "Presence of a bony fragment in the Lisfranc joint space"
+  } ]
 }

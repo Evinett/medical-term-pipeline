@@ -1,7 +1,43 @@
 {
-  "diagnoses" : [ ],
-  "procedures" : [ ],
-  "medications_and_treatments" : [ ],
-  "tests" : [ ],
-  "clinical_narrative" : [ ]
+  "diagnoses" : [ {
+    "term_text" : "type 2 diabetes",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "gout",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "2/6 Systolic ejection murmur",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "Nicotine dependence",
+    "omop_domain" : "condition_occurrence",
+    "OMOP_ID" : "0"
+  } ],
+  "procedures" : [ {
+    "term_text" : "nicotine patch",
+    "omop_domain" : "procedure_occurrence",
+    "OMOP_ID" : "0"
+  } ],
+  "medications_and_treatments" : [ {
+    "term_text" : "allopurinol",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  }, {
+    "term_text" : "21 mg nicotine patch",
+    "omop_domain" : "drug_exposure",
+    "OMOP_ID" : "0"
+  } ],
+  "tests" : [ {
+    "term_text" : "Hemoglobin A1c",
+    "omop_domain" : "measurement",
+    "OMOP_ID" : "0"
+  } ],
+  "clinical_narrative" : [ {
+    "term_text" : "smoking cessation"
+  }, {
+    "term_text" : "impending fatherhood"
+  } ]
 }
