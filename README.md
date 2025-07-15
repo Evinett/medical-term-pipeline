@@ -74,3 +74,7 @@ mvn clean compile exec:java
 ```
 
 The application will process all valid files in the `input/` directory and save the resulting `_terms.json` files to the `output/` directory. A progress bar will be displayed in the console.
+
+Next Steps
+	•	The mapping files included in this repository are minimal examples, intended primarily for demonstration purposes. They contain only a small number of concepts.
+	•	The clinical_narrative section is functional but requires further refinement to better distinguish between structured clinical concepts and unstructured narrative text.
