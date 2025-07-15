@@ -110,8 +110,7 @@ The application will process all valid files in the `input/` directory and save 
 
     •	Integrate database connectors.
 	•	Integrate Google Chat messaging functionality. 
-        Example: 
-Processing Processor.main()] INFO  com.example.ClinicalNoteProcessor - All 67 files have been processed.
-[INFO] Total time:  08:42 min
-[INFO] Finished at: 2025-07-15T22:52:29+10:00
-[INFO] ------------------------------------------------------------------------
+    •	Example: 
+        Processing Processor.main()] INFO  com.example.ClinicalNoteProcessor - All 67 files have been processed.
+        [INFO] Total time:  08:42 min
+        [INFO] Finished at: 2025-07-15T22:52:29+10:00
