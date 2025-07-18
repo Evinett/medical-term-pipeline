@@ -1,0 +1,101 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Extracted Medical Terms",
+  "type": "object",
+  "properties": {
+    "diagnoses": {
+      "$ref": "#/definitions/structuredTermArray"
+    },
+    "procedures": {
+      "$ref": "#/definitions/structuredTermArray"
+    },
+    "medications_and_treatments": {
+      "$ref": "#/definitions/medicationTermArray"
+    },
+    "tests": {
+      "$ref": "#/definitions/structuredTermArray"
+    },
+    "clinical_narrative": {
+      "$ref": "#/definitions/narrativeTermArray"
+    }
+  },
+  "required": [
+    "diagnoses",
+    "procedures",
+    "medications_and_treatments",
+    "tests",
+    "clinical_narrative"
+  ],
+  "definitions": {
+    "structuredTermObject": {
+      "type": "object",
+      "properties": {
+        "term_text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "omop_domain": {
+          "type": "string",
+          "minLength": 1
+        },
+        "OMOP_ID": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "term_text",
+        "omop_domain"
+      ],
+      "additionalProperties": false
+    },
+    "medicationTermObject": {
+      "type": "object",
+      "properties": {
+        "term_text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "omop_domain": {
+          "type": "string",
+          "minLength": 1
+        },
+        "OMOP_ID": {
+          "type": "string"
+        },
+        "details": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "term_text",
+        "omop_domain"
+      ],
+      "additionalProperties": false
+    },
+    "narrativeTermObject": {
+      "type": "object",
+      "properties": {
+        "term_text": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "term_text"
+      ],
+      "additionalProperties": false
+    },
+    "structuredTermArray": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/structuredTermObject" }
+    },
+    "medicationTermArray": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/medicationTermObject" }
+    },
+    "narrativeTermArray": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/narrativeTermObject" }
+    }
+  }
+}

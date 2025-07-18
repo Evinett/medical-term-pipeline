@@ -1,0 +1,18 @@
+# This file maps procedure terms to OMOP Concept IDs.
+# The format is: Term Text (case-insensitive) <TAB> OMOP_ID
+# The system will look up the lowercase version of the extracted term.
+
+physical therapy	4135332
+refer to physical therapy	4135332
+x-ray	4090299
+colonoscopy	2001311
+appendectomy	4248812
+cholecystectomy	4052309
+coronary artery bypass graft	4123594
+cabg	4123594
+total knee replacement	4096052
+total hip replacement	4235882
+cardiology consultation	4216292
+refer to cardiologist	4216292
+blood draw	4076197
+vaccination	4273859

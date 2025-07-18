@@ -1,0 +1,11 @@
+# This file maps observation and measurement terms to OMOP Concept IDs.
+# The format is: Term Text (case-insensitive) <TAB> OMOP_ID
+
+Mitral regurgitation is present	4324203
+Grade 3/6 systolic ejection murmur	432533
+1+ pitting edema of the bilateral lower extremities	4087939
+X-ray lumbar spine is unremarkable	40482354
+Hemoglobin A1c is elevated at 8	40762352
+Blood Pressure: Elevated	432870
+Home blood pressure monitoring	4099651
+Tenderness to palpation of the abdomen	40482051

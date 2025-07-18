@@ -1,0 +1,21 @@
+# This file maps medication terms to OMOP Concept IDs.
+# The format is: Drug Name (case-insensitive) <TAB> OMOP_ID
+# The system will look up the lowercase version of the extracted term.
+# NOTE: For best results, the term should be the drug name itself (e.g., 'meloxicam')
+# rather than the full prescription details ('meloxicam 15 mg once daily').
+
+tylenol	19029398
+acetaminophen	19029398
+ibuprofen	1177480
+advil	1177480
+motrin	1177480
+meloxicam	1115177
+aspirin	1191
+lisinopril	1308259
+metformin	1503297
+atorvastatin	1539403
+lipitor	1539403
+amoxicillin	1713332
+prednisone	1310149
+naproxen	1112807
+aleve	1112807
