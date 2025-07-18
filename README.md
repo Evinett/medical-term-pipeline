@@ -21,6 +21,23 @@ Before you begin, ensure you have the following installed:
 - **Maven**: Apache Maven 3.6+
 - **Ollama**: A running instance of Ollama with a downloaded model (e.g., `llama3`, `mistral`).
 
+Quickstart
+To run the application:
+
+1. Create a new folder for the application.
+2. Copy the file `medical-term-extractor-1.0.jar` (found in the `target` directory) into this folder.
+3. Open a terminal in this folder and run the following command:
+
+```bash
+java -jar medical-term-extractor-1.0.jar
+```
+
+4. Once the application has run (this creates the input folder), add your clinical notes (`.txt` or `.pdf` files) to the `input` folder  And then rerun the command 
+
+```bash
+java -jar medical-term-extractor-1.0.jar
+
+
 ---
 
 ## Setup
@@ -139,8 +156,8 @@ java -jar medical-term-extractor-1.0.jar
         [INFO] Total time:  08:42 min
         [INFO] Finished at: 2025-07-15T22:52:29+10:00
 
-/**
+
  * Medical Term Extraction Pipeline
  * Copyright (C) Roger Ward, 2025
  * DOI: 10.5281/zenodo.15960200
- */
+ 
