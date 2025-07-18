@@ -21,7 +21,7 @@ Before you begin, ensure you have the following installed:
 - **Maven**: Apache Maven 3.6+
 - **Ollama**: A running instance of Ollama with a downloaded model (e.g., `llama3`, `mistral`).
 
-Quickstart
+## Quickstart
 To run the application:
 
 1. Create a new folder for the application.
