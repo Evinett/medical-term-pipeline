@@ -4,6 +4,10 @@
 # Output file
 output/
 
+# Synthetic_notes_lib
+synthetic_notes_lib/
+
+
 # Log files
 *.log
 
