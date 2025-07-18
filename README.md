@@ -60,6 +60,7 @@ Before you begin, ensure you have the following installed:
 3.  **Prepare Input Files**
     - Place your clinical notes (`.txt` or `.pdf`) inside the `input/` directory.
     - Ensure your OMOP mapping files (`conditions-map.txt`, `medications-map.txt`, `observations-map.txt`) are located in the `src/main/resources` directory of the project.  These files are accessed as classpath resources.
+    - The LLM system prompt can be modified by editing the `src/main/resources/system-prompt.txt` file. This allows you to change the extraction instructions without recompiling the application.
 
 
 
@@ -83,7 +84,8 @@ Before you begin, ensure you have the following installed:
 │       └── resources/
 │           ├── config.properties
 │           ├── logback.xml
-│           └── output_schema.json
+│           ├── output_schema.json
+│           └── system-prompt.txt
 ├── pom.xml
 └── README.md
 ```
@@ -104,6 +106,28 @@ mvn clean compile exec:java
 
 The application will process all valid files in the `input/` directory and save the resulting `_terms.json` files to the `output/` directory. A progress bar will be displayed in the console.
 
+---
+
+## Running the Application
+
+To run the application:
+
+1. Create a new folder for the application.
+2. Copy the file `medical-term-extractor-1.0.jar` (found in the `target` directory after building the project) into this folder.
+3. Open a terminal in this folder and run the following command:
+
+```bash
+java -jar medical-term-extractor-1.0.jar
+```
+
+4. Once the application has run, add your clinical notes (`.txt` or `.pdf` files) to the `input` folder that will be created automatically. And then rerun the command 
+
+```bash
+java -jar medical-term-extractor-1.0.jar
+```
+
+---
+
 ## Next Steps
 	•	The mapping files included in this repository are minimal examples, intended primarily for demonstration purposes. They contain only a small number of concepts.
 	•	The clinical_narrative section is functional but requires further refinement to better distinguish between structured clinical concepts and unstructured narrative text.
@@ -114,3 +138,9 @@ The application will process all valid files in the `input/` directory and save 
         Processing Processor.main()] INFO  com.example.ClinicalNoteProcessor - All 67 files have been processed.
         [INFO] Total time:  08:42 min
         [INFO] Finished at: 2025-07-15T22:52:29+10:00
+
+/**
+ * Medical Term Extraction Pipeline
+ * Copyright (C) Roger Ward, 2025
+ * DOI: 10.5281/zenodo.15960200
+ */

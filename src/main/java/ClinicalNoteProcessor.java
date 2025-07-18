@@ -1,3 +1,11 @@
+/**
+ * Medical Term Extraction Pipeline
+ * Copyright (C) Roger Ward, 2025
+ * DOI: 10.5281/zenodo.15960200
+ *
+ * This project is licensed under the MIT License.
+ * See the LICENSE file in the project root for full license information.
+ */
 package com.example;
 
 import com.fasterxml.jackson.databind.JsonNode;
@@ -44,6 +52,7 @@ public class ClinicalNoteProcessor {
     private final String outputDir;
     private final OllamaClient ollamaClient;
     private final JsonSchema schema;
+    private final String systemPrompt;
     private final int numThreads;
 
     private final Map<String, String> conditionMap;
@@ -66,6 +75,9 @@ public class ClinicalNoteProcessor {
         this.numThreads = Integer.parseInt(config.getProperty("processing.numThreads", "10"));
 
         this.ollamaClient = new OllamaClient(ollamaModel, ollamaApiUrl, maxRetries, retryDelayMs, requestTimeoutMinutes);
+
+        // Load the system prompt from an external file
+        this.systemPrompt = ConfigLoader.loadResourceAsString("system-prompt.txt");
 
         // Load OMOP ID mapping files
         this.conditionMap = loadTermMap("conditions-map.txt");
@@ -174,9 +186,8 @@ public class ClinicalNoteProcessor {
             }
 
             if (content != null && !content.isBlank()) {
-                String systemPrompt = createSystemPrompt();
                 // The LLM now returns a raw string, which we must parse.
-                String llmResponse = ollamaClient.extractTerms(systemPrompt, content);
+                String llmResponse = ollamaClient.extractTerms(this.systemPrompt, content);
                 JsonNode flatTermArray = parseTextResponse(llmResponse);
                 // We transform this flat array into the required structured JSON
                 JsonNode structuredJson = buildStructuredJson(flatTermArray);
@@ -546,38 +557,5 @@ public class ClinicalNoteProcessor {
         }
         logger.info("Loaded {} terms from {}", map.size(), mapFileName);
         return map;
-    }
-
-    private String createSystemPrompt() {
-        return """
-        You are an expert medical data extractor. Your task is to read the following medical note and extract every clinical term.
-        For each term, write it on a new line, prefixed with one of the following categories: DIAGNOSIS, PROCEDURE, MEDICATION, TEST, FINDING.
-        Your entire output must be only these lines. Do not add any other explanation or text.
-
-        **EXAMPLE**
-
-        *Input Text:*
-        "HPI: 57-year-old male with congestive heart failure and type 2 diabetes, presents with back pain after lifting a heavy box. He reports taking some Tylenol and ibuprofen.
-        EXAM: Grade 2/6 systolic ejection murmur.
-        RESULTS: X-ray lumbar spine is unremarkable. Hemoglobin A1c is elevated at 8.
-        ASSESSMENT: Acute lumbar strain.
-        PLAN: Initiate meloxicam 15 mg once daily. Refer to physical therapy."
-
-        *Correct Output:*
-        DIAGNOSIS: congestive heart failure
-        DIAGNOSIS: type 2 diabetes
-        DIAGNOSIS: back pain
-        FINDING: lifting a heavy box
-        MEDICATION: Tylenol
-        MEDICATION: ibuprofen
-        FINDING: Grade 2/6 systolic ejection murmur
-        TEST: X-ray lumbar spine is unremarkable
-        TEST: Hemoglobin A1c is elevated at 8
-        DIAGNOSIS: Acute lumbar strain
-        MEDICATION: meloxicam 15 mg once daily
-        PROCEDURE: Refer to physical therapy
-
-        **Final Instruction**: Now, apply these exact rules to the user-provided note.
-        """;
     }
 }

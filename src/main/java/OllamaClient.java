@@ -1,3 +1,11 @@
+/**
+ * Medical Term Extraction Pipeline
+ * Copyright (C) Roger Ward, 2025
+ * DOI: 10.5281/zenodo.15960200
+ *
+ * This project is licensed under the MIT License.
+ * See the LICENSE file in the project root for full license information.
+ */
 package com.example;
 
 import com.fasterxml.jackson.databind.JsonNode;

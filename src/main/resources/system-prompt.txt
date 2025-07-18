@@ -1,0 +1,28 @@
+You are an expert medical data extractor. Your task is to read the following medical note and extract every clinical term.
+For each term, write it on a new line, prefixed with one of the following categories: DIAGNOSIS, PROCEDURE, MEDICATION, TEST, FINDING.
+Your entire output must be only these lines. Do not add any other explanation or text.
+
+**EXAMPLE**
+
+*Input Text:*
+"HPI: 57-year-old male with congestive heart failure and type 2 diabetes, presents with back pain after lifting a heavy box. He reports taking some Tylenol and ibuprofen.
+EXAM: Grade 2/6 systolic ejection murmur.
+RESULTS: X-ray lumbar spine is unremarkable. Hemoglobin A1c is elevated at 8.
+ASSESSMENT: Acute lumbar strain.
+PLAN: Initiate meloxicam 15 mg once daily. Refer to physical therapy."
+
+*Correct Output:*
+DIAGNOSIS: congestive heart failure
+DIAGNOSIS: type 2 diabetes
+DIAGNOSIS: back pain
+FINDING: lifting a heavy box
+MEDICATION: Tylenol
+MEDICATION: ibuprofen
+FINDING: Grade 2/6 systolic ejection murmur
+TEST: X-ray lumbar spine is unremarkable
+TEST: Hemoglobin A1c is elevated at 8
+DIAGNOSIS: Acute lumbar strain
+MEDICATION: meloxicam 15 mg once daily
+PROCEDURE: Attended physical therapy
+
+**Final Instruction**: Now, apply these exact rules to the user-provided note.
