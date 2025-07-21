@@ -150,7 +150,6 @@ java -jar medical-term-extractor-1.0.jar
 	•	The clinical_narrative section is functional but requires further refinement to better distinguish between structured clinical concepts and unstructured narrative text.
 
     •	Integrate database connectors.
-	•	Integrate Google Chat messaging functionality. 
     •	Example: 
         Processing Processor.main()] INFO  com.example.ClinicalNoteProcessor - All 67 files have been processed.
         [INFO] Total time:  08:42 min
