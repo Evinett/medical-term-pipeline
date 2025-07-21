@@ -41,8 +41,12 @@ public class OllamaClient {
         this.retryDelayMs = retryDelayMs;
         this.requestTimeout = Duration.ofMinutes(requestTimeoutMinutes);
         this.httpClient = HttpClient.newBuilder()
+                .version(HttpClient.Version.HTTP_2)
                 .connectTimeout(Duration.ofSeconds(10)) // Connection timeout
                 .build();
+        if (!this.apiUrl.toLowerCase().startsWith("https://")) {
+            logger.warn("Ollama API URL does not use HTTPS. Communication will be unencrypted: {}", this.apiUrl);
+        }
     }
 
     public String extractTerms(String systemPrompt, String userPrompt) {
@@ -62,11 +66,12 @@ public class OllamaClient {
                 if (response.statusCode() >= 200 && response.statusCode() < 300) {
                     return extractTextFromResponse(response.body());
                 } else {
-                    logger.warn("Attempt {}/{} failed. Received non-2xx status code: {}. Body: {}",
-                            attempt + 1, maxRetries, response.statusCode(), response.body());
+                    // Avoid logging the full response body as it may contain sensitive information (e.g., PHI).
+                    logger.warn("Attempt {}/{} failed. Received non-2xx status code: {}. Response body length: {}",
+                            attempt + 1, maxRetries, response.statusCode(), response.body() != null ? response.body().length() : 0);
                 }
             } catch (IOException | InterruptedException e) {
-                logger.warn("Attempt {}/{} failed with exception: {}", attempt + 1, maxRetries, e.getMessage());
+                logger.warn("Attempt {}/{} failed with an exception.", attempt + 1, maxRetries, e);
                 if (e instanceof InterruptedException) {
                     Thread.currentThread().interrupt();
                     return "";
@@ -122,7 +127,8 @@ public class OllamaClient {
             }
             return content;
         } catch (IOException e) {
-            logger.error("Failed to parse the Ollama response body: {}", responseBody, e);
+            // Avoid logging the full response body as it may contain sensitive information.
+            logger.error("Failed to parse the Ollama response body. Length: {}", responseBody != null ? responseBody.length() : 0, e);
             return "";
         }
     }
